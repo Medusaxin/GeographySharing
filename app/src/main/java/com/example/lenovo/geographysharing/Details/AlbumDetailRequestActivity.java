@@ -2,6 +2,7 @@ package com.example.lenovo.geographysharing.Details;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.view.MenuItem;
 
 import com.example.lenovo.geographysharing.BaseClass.BaseActivity;
 import com.example.lenovo.geographysharing.R;
@@ -27,6 +28,16 @@ public class AlbumDetailRequestActivity extends BaseActivity {
         setSupportActionBar();//表示当前页面支持ActionBar
         setSupportArrowActionBar(true);
         setTitle("详情页面");
+    }
+
+    //处理左上角返回箭头
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
