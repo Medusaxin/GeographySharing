@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_bottom"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_alignParentBottom="true"
+    android:baselineAligned="true"
+    android:orientation="horizontal">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_add_shop_cart"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="1dp"
+        android:layout_weight="2"
+        android:background="@android:color/holo_orange_dark"
+        android:gravity="center_horizontal">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="确认发布"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+</android.support.v7.widget.LinearLayoutCompat>

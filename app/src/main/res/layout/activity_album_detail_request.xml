@@ -25,9 +25,9 @@
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
                     android:gravity="left"
-                    android:text="标题                                    "
+                    android:text="标题                                          "
                     android:textSize="@dimen/dimen_40sp" />
                 <TextView
                     android:id="@+id/product_price"
@@ -86,6 +86,13 @@
                     android:text="中国地质大学"
                     android:textSize="@dimen/dimen_40sp"
                     android:id="@+id/textView_Request" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="\n
+
+                    "
+                    android:textSize="@dimen/dimen_40sp"/>                     />
 
             </LinearLayout>
 
@@ -158,12 +165,6 @@
                 android:background="#fff"
                 android:layout_marginTop="@dimen/dimen_20dp">
 
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="————我是有底线的————"
-                    android:textSize="@dimen/dimen_40sp" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
