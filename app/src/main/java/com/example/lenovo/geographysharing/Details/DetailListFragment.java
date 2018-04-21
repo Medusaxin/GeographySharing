@@ -36,15 +36,14 @@ public class DetailListFragment extends BaseFragment {
     private static final int LOAD_MORE = 3000;
     private TextView mEmptyView;
     public static List<Equipment> myEquipmentList = new ArrayList<>();
-
     public DetailListFragment() {
     }
 
-    public static Fragment newInstance(int SiteId, int channId) {
+    public static Fragment newInstance(int channId) {
         DetailListFragment detailListFragment = new DetailListFragment();
         Bundle bundle = new Bundle();
         bundle.putInt(CHANNEL_ID, channId);
-        bundle.putInt(SITE_ID, SiteId);
+       // bundle.putInt(SITE_ID, SiteId);
         detailListFragment.setArguments(bundle);
         return detailListFragment;
     }
@@ -89,7 +88,16 @@ public class DetailListFragment extends BaseFragment {
         mAdapter.setOnItemClickListener(new PullLoadRVAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-                AlbumDetailActivity.launchAlbumDetailActivity(getActivity());
+                switch(position){
+                    default:
+                        if(getArguments().getInt(CHANNEL_ID)==9){
+                            AlbumDetailRequestActivity.launchAlbumDetailRequestActivity(getActivity());
+                        }
+                        else {
+                            AlbumDetailActivity.launchAlbumDetailActivity(getActivity());
+                        }
+                        break;
+                }
             }
         });
     }

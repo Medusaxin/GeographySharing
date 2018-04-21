@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.example.lenovo.geographysharing.BaseClass.BaseFragment;
 import com.example.lenovo.geographysharing.EntityClass.Issue;
 import com.example.lenovo.geographysharing.Issue.IssueDetailActivity;
+import com.example.lenovo.geographysharing.Issue.IssueDetailRequestActivity;
 import com.example.lenovo.geographysharing.R;
 
 import static com.example.lenovo.geographysharing.EntityClass.Issue.IDEZHI;
@@ -44,6 +45,9 @@ public class IssueFragment extends BaseFragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long l) {
                 switch (position){
+                    case 8:
+                        IssueDetailRequestActivity.launchIIssueDetailRequestActivity(getActivity());
+                        break;
                     default:
                         IssueDetailActivity.launchIssueDetailActivity(getActivity());
                         break;
