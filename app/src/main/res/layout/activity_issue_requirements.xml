@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include
+        layout="@layout/tob_actionbar"/>
+
+
+        <EditText
+            android:id="@+id/issue_request_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="[求租]"
+            android:background="@null"/>
+
+    <View
+
+        android:layout_width="fill_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="1dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="#aa000000" />
+
+    <EditText
+        android:id="@+id/issue_request_content"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_690dp"
+        android:hint="[描述一下需求的故事或者细节]"
+        android:minLines="8"
+        android:maxLines="10"
+        android:inputType="textMultiLine"
+        android:background="@null"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp">
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="价格:"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen_38dp" />
+        <EditText
+            android:id="@+id/issue_request_expense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入租用价格"
+            android:textColorHint="#fa88"
+            android:background="@drawable/bg_edit"
+             />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp">
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="地点:"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen_38dp" />
+
+        <EditText
+            android:id="@+id/issue_request_adress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edit"
+            android:hint="请输入需求地点"
+            android:textColorHint="#fa88"/>
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/issue_request"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/login_button"
+        android:text="确定发布"
+        android:textSize="@dimen/dimen_40dp" />
+
+
+
+
+
+
+</LinearLayout>

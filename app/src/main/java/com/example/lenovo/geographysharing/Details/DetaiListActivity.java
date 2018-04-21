@@ -2,7 +2,9 @@ package com.example.lenovo.geographysharing.Details;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.MenuItem;
 
 import com.example.lenovo.geographysharing.BaseClass.BaseActivity;
@@ -60,14 +62,24 @@ public class DetaiListActivity extends BaseActivity {
     //初始化Fragment
     private void initFragemnt() {
 
-        mFragmentManager = getSupportFragmentManager();
-        //初始化传入的homefragment
-        mCurrentFragment = FragmentManagerWrapper.getInstance().createFragment(DetailListFragment.class,true);
-        //fragmentmanager 事务的回滚
-        mFragmentManager.beginTransaction().add(R.id.fl_details_content,mCurrentFragment).commit();
+        /*
+        传参
+         */
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.fl_details_content, DetailListFragment.newInstance(mChannId))
+                .commit();
+        /*
+        不传参
+         */
+//
+//        mFragmentManager = getSupportFragmentManager();
+//        //初始化传入的homefragment
+//
+//        mCurrentFragment = FragmentManagerWrapper.getInstance().createFragment(DetailListFragment.class,true);
+//
+//        //fragmentmanager 事务的回滚
+//        mFragmentManager.beginTransaction().add(R.id.fl_details_content,mCurrentFragment).commit();
     }
-
-
 
     public static void launchDetaiListActivity(Context context, int channelId) {
         Intent intent = new Intent(context, DetaiListActivity.class);
